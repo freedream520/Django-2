@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>signup</title>
+    <style type="text/css">
+    body {
+        background-color: #F3F3F3
+    }
+    
+    h1{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    /*    
+    .clearfloat:after {
+        display: block;
+        clear: both;
+        content: "";
+        visibility: hidden;
+        height: 0
+    }
+    
+    .clearfloat {
+        zoom: 1
+    }
+    */
+    
+    .container {
+        display: table;
+        margin: 0 auto;
+    }
+    
+    .textbox-row {
+        display: table;
+        font-size: 16px;
+        float: right;
+        margin-top: 30px;
+        margin-right: 10%;
+    }
+    
+    .textbox {
+        height: 30px;
+        width: 220px;
+        font-size: 16px;
+    }
+    
+    #signup-button {
+        height: 40px;
+        width: 90px;
+        font-size: 15px;
+        border-radius: 5px;
+        margin-top: 13%;
+        margin-bottom: 8%;
+        background-color: #FBFBFB
+    }
+    
+    #signup-form {
+        height: 520px;
+        width: 400px;
+        background-color: #fff;
+        margin-top: 5%;
+        margin-bottom: 4%;
+        padding: 20px;
+        border-radius: 10PX;
+        box-shadow: 5px 5px 12px #E3E3E3
+    }
+    </style>
+</head>
+
+<body>
+    <form id="signup-form" class="container" method="post">
+        {% csrf_token %}
+        <h1 class="title">注册</h1>
+        <div class="textbox-row"> 工号：<input class="textbox" type="text" name="number"> </div>
+        <div class="textbox-row"> 用户名：<input class="textbox" type="text" name="username"> </div>
+        <div class="textbox-row"> 性别：<input class="textbox" type="text" name="sex"> </div>
+        <div class="textbox-row"> 年龄：<input class="textbox" type="text" name="age"> </div>
+        <div class="textbox-row"> 所在部门：<input class="textbox" type="text" name="department"> </div>
+        <div class="textbox-row"> 职称：<input class="textbox" type="text" name="jobTitle"> </div>
+        <div class="textbox-row"> 密码：<input class="textbox" type="password" name="password"> </div>
+        <div class="textbox-row"> 再次输入密码：<input class="textbox" type="password" name="checkPassword"> </div>
+        <div style="clear: both"></div>
+        <button id="signup-button" class="container" type="submit">注册</button>
+    </form>
+</body>
+
+</html>

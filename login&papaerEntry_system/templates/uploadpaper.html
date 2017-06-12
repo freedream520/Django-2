@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>upoadpaper</title>
+    <style type="text/css">
+    .container {
+        margin: 0 auto;
+        display: table;
+    }
+    
+    .text-align {
+        text-align: center;
+    }
+    
+    .inputBox {
+        font-size: 20px;
+        margin-bottom: 20px;
+        height: 25px;
+        width: 400px;
+    }
+    
+    #title{
+    	margin-bottom: 50px;
+    }
+
+    #submit-button{
+		height: 40px;
+        width: 110px;
+        border-radius: 5px;
+        margin-top: 10%;
+        font-size: 15px;
+        background-color: #FBFBFB;
+        border-radius: 20PX;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="container" id="title">科研论文录入</h1>
+        <form class="container" method="get">
+            <div class="container">文章名称：<input class="inputBox" type="text" name="paperTitle"> </div>
+            <div class="container">期刊名称：<input class="inputBox" type="text" name="journalName"> </div>
+            <div class="container">发表时间：<input class="inputBox" type="date" name="papaerDate"> </div>
+            <div class="container">第一作者：<input class="inputBox" type="text" name="papaerAuthor"></div>
+            <button class="container" id="submit-button" type="submit">提交</button>
+        </form>
+    </div>
+</body>
+
+</html>

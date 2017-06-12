@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>papers</title>
+	<style type="text/css">
+		h1{
+			font-size: 24px;
+			text-align: center;
+		}
+		
+		a {font-size:16px}   
+		a:link {color: black; text-decoration:none;}  
+		a:active:{color: black; }
+		a:visited {color:black;text-decoration:none;}  
+		a:hover {color: black; text-decoration:none;}
+
+		.container{
+			display: table;
+			margin: 0 auto;
+		}
+
+		.text-align{
+			text-align: center
+		}
+
+		.button{
+			height: 40px;
+        	width: 90px;
+        	font-size: 15px;
+        	margin-top: 13%;
+        	margin-bottom: 8%;
+        	background-color: #FBFBFB
+		}
+
+		#button-addPaper{
+			border-top-left-radius:2em;
+			border-bottom-left-radius:2em;
+		}
+		
+		#button-signOut{
+			border-top-right-radius:2em;
+			border-bottom-right-radius:2em;
+		}
+	</style>
+</head>
+<body>
+	<h1>{{ username }}上传的论文信息</h1>
+	<table class="container" border="1" cellpadding="14">
+		<tr><th>文章名称</th><th>期刊名称</th><th>发表时间</th><th>第一作者</th><tr>
+		{% for i in paperList %}
+			<tr>
+				<td>{{ i.paperTitle }}</td>
+				<td>{{ i.journalName }}</td>
+				<td>{{ i.papaerDate }}</td>
+				<td>{{ i.papaerAuthor }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<div class="container">
+		<a href="uploadpaper"><button id="button-addPaper" class="button">添加论文</button></a>
+        <a href="signout"><button id="button-signOut" class="button" >退出登陆</button></a>
+	</div>
+</body>
+</html>
